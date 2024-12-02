@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Transfer from './components/Tranfer';
 
 const App: React.FC = () => {
     const [status, setStatus] = useState<'on' | 'off'>('off'); // กำหนดประเภทให้ state
@@ -16,6 +17,7 @@ const App: React.FC = () => {
 
     return (
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
+           
             <h1 className="text-2xl font-bold mb-6">GPIO Light Control</h1>
             <div className="flex space-x-4">
                 <button
@@ -31,6 +33,7 @@ const App: React.FC = () => {
                     Turn Off
                 </button>
             </div>
+            <Transfer/>
         </div>
     );
 };
